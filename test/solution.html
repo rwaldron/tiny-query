@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Tiny jQuery Test Suite</title>
+  <link rel="stylesheet" href="vendor/qunit.css">
+  <script src="vendor/jquery.js"></script>
+  <script src="vendor/qunit.js"></script>
+  <script type="text/grunt">qunit</script>
+  <script src="vendor/util.js"></script>
+
+  <script src="../src/solution/tiny-jquery-solution.js"></script>
+
+  <!-- Test scripts. Uncomment incrementally. -->
+  <script src="tests/shape.js"></script>
+  <script src="tests/selection.js"></script>
+  <script src="tests/iteration.js"></script>
+  <script src="tests/extra-credit.js"></script>
+
+</head>
+<body>
+  <h1 id="qunit-header">Tiny jQuery Test Suite</h1>
+  <h2 id="qunit-banner"></h2>
+  <div id="qunit-testrunner-toolbar"></div>
+  <h2 id="qunit-userAgent"></h2>
+  <ol id="qunit-tests"></ol>
+  <div id="qunit-fixture">test markup</div>
+
+  <div id="prefilled" style="display:none">
+    <span class="test-a"></span>
+    <span class="test-a test-b"></span>
+    <span class="test-b test-c"></span>
+    <div class="test-c"><span><article></article></span></div>
+    <span id="test-id"><span class="test-c"></span></span>
+  </div>
+</body>
+</html>
