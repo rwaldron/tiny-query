@@ -1,32 +1,28 @@
-module("Iteration", {
-	setup: function() {
-		this.elems = new $$(".test-a, .test-b");
-	}
-});
+module("Iteration");
 
 test("Stores elements on numeric attributes", 3, function() {
-	var elems = this.elems;
+	var selection = new $$(".test-a, .test-b");
 
-	ok(elems[0] instanceof Element);
-	ok(elems[1] instanceof Element);
-	ok(elems[2] instanceof Element);
+	ok(selection[0] instanceof Element);
+	ok(selection[1] instanceof Element);
+	ok(selection[2] instanceof Element);
 });
 
 test("Correctly iterates over the provided selection", 6, function() {
 	var counter = 0;
-	var elems = this.elems;
+	var selection = new $$(".test-a, .test-b");
 
-	elems.forEach(function(elem, idx) {
-		equal(elems[idx], elem, "Supplies the correct element on each iteration");
+	selection.forEach(function(elem, idx) {
+		equal(selection[idx], elem, "Supplies the correct element");
 		equal(idx, counter, "Supplies the correct index");
 		counter++;
 	});
 });
 
-test("Sets the iterator context to the selection", function() {
-	var elems = this.elems;
+test("Sets the iterator context to the current element", function() {
+	var selection = new $$(".test-a, .test-b");
 
-	elems.forEach(function(elem, idx) {
-		equal(this, elems[idx], "Correct context");
+	selection.forEach(function(elem, idx) {
+		equal(this, selection[idx], "Correct context");
 	});
 });

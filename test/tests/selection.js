@@ -1,15 +1,15 @@
 module("Selection");
 
 test("Tag names", 1, function() {
-	var elems = new $$("article");
+	var selection = new $$("article");
 
-	equal(elems.length, 1, "Returns the correct number of elements");
+	equal(selection.length, 1, "Returns the correct number of elements");
 });
 
 test("Class names", 1, function() {
-	var elems = new $$(".test-a");
+	var selection = new $$(".test-a");
 
-	equal(elems.length, 2, "Returns the correct number of elements");
+	equal(selection.length, 2, "Returns the correct number of elements");
 });
 
 test("IDs", 1, function() {
