@@ -19,7 +19,7 @@ test("Correctly iterates over the provided selection", 6, function() {
 	});
 });
 
-test("Sets the iterator context to the current element", function() {
+test("Sets the iterator context to the current element", 3, function() {
 	var selection = new $$(".test-a, .test-b");
 
 	selection.forEach(function(elem, idx) {
