@@ -9,6 +9,6 @@ test("Global functions", 3, function() {
 test("Return value", 2, function() {
 	var selection = new $$("body");
 
-	equal(typeof selection.length, "number", "Returned object defines a `length` Number property");
-	equal(typeof selection.forEach, "function", "Returned object defines a `forEach` method");
+	equal(typeof selection.length, "number", "Selection defines a `length` Number property");
+	equal(typeof selection.forEach, "function", "Selection defines a `forEach` method");
 });
